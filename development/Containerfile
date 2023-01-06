@@ -1,0 +1,17 @@
+FROM fedora-toolbox:latest
+
+# Dependencies for neovim plugins
+RUN dnf -y install \
+  gcc \
+  gcc-c++ \
+  libstdc++-static
+
+# Main dev tools
+RUN dnf -y install \
+  fd-find \
+  fish \
+  neovim \
+  ranger \
+  ripgrep
+
+CMD []
